@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sports United</title>
+    <style>
+        :root {
+            --blue: #1e90ff;
+            --dark: #111111;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background: #0a0a0a; color: #f4f4f4; line-height: 1.6; }
+
+        /* Animations */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+
+        header { background: var(--dark); text-align: center; padding: 20px; border-bottom: 3px solid var(--blue); animation: slideDown 0.6s ease; }
+        nav { background: var(--blue); text-align: center; padding: 12px; position: sticky; top: 0; z-index: 10; }
+        nav a { color: #fff; text-decoration: none; margin: 0 12px; font-weight: bold; display: inline-block; transition: transform 0.3s, opacity 0.3s; }
+        nav a:hover { opacity: 0.85; transform: scale(1.1); }
+
+        main { max-width: 500px; margin: 40px auto; padding: 0 20px; animation: fadeIn 0.8s ease; }
+        .box { background: #1c1c1e; border: 1px solid #333; border-radius: 8px; padding: 25px; transition: border-color 0.3s, box-shadow 0.3s; }
+        .box:hover { border-color: var(--blue); box-shadow: 0 8px 20px rgba(30,144,255,0.2); }
+        .box h2 { color: var(--blue); text-align: center; margin-bottom: 15px; }
+        .info { text-align: center; margin-bottom: 20px; color: #ccc; }
+        .info strong { color: #fff; }
+        .info a { color: var(--blue); text-decoration: none; transition: color 0.3s; }
+        .info a:hover { color: #0d6efd; text-decoration: underline; }
+
+        label { display: block; margin: 10px 0 5px; font-weight: bold; }
+        input, textarea { width: 100%; padding: 10px; background: #111; color: #fff; border: 1px solid #444; border-radius: 5px; transition: border-color 0.3s, box-shadow 0.3s; }
+        input:focus, textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 6px rgba(30,144,255,0.4); }
+        button { width: 100%; margin-top: 15px; padding: 12px; background: var(--blue); color: #fff; border: none; border-radius: 5px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: transform 0.3s, background 0.3s; }
+        button:hover { background: #0d6efd; transform: translateY(-2px); }
+
+        footer { background: var(--dark); text-align: center; padding: 15px; margin-top: 40px; color: #aaa; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Contact Sports United</h1>
+    </header>
+
+    <nav>
+        <a href="Home-Page.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="Contact-Details.html">Contact</a>
+    </nav>
+
+    <main>
+        <div class="box">
+            <h2>Get in Touch</h2>
+            <div class="info">
+                <p><strong>Location:</strong> College Sports Ground, University Campus</p>
+                <p><strong>Email:</strong> <a href="mailto:sportsunited@college.edu">sportsunited@college.edu</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                <p><strong>Practice:</strong> Mon-Fri, 4:00-7:00 PM</p>
+            </div>
+
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="e.g. +1 (555) 123-4567" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+                <p id="status" style="display:none; text-align:center; margin-top:10px; color:#2ecc71;"></p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sports United. Built for Git &amp; GitHub Practical Assignment.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var status = document.getElementById('status');
+            status.style.display = 'block';
+            status.textContent = 'Thanks! Your message has been sent.';
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
+

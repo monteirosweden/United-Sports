@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports United - Home</title>
+    <style>
+        :root {
+            --blue: #1e90ff;
+            --dark: #111111;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background: #0a0a0a; color: #f4f4f4; line-height: 1.6; }
+
+        /* Animations */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+
+        header { background: var(--dark); text-align: center; padding: 20px; border-bottom: 3px solid var(--blue); animation: slideDown 0.6s ease; }
+        nav { background: var(--blue); text-align: center; padding: 12px; position: sticky; top: 0; z-index: 10; }
+        nav a { color: #fff; text-decoration: none; margin: 0 12px; font-weight: bold; display: inline-block; transition: transform 0.3s, opacity 0.3s; }
+        nav a:hover { opacity: 0.85; transform: scale(1.1); }
+
+        main { max-width: 900px; margin: 40px auto; padding: 0 20px; animation: fadeIn 0.8s ease; }
+
+        .hero { text-align: center; padding: 30px 20px 40px; animation: fadeIn 0.8s ease; }
+        .hero h2 { color: var(--blue); font-size: 2.2rem; margin-bottom: 15px; }
+        .hero p { color: #ccc; max-width: 650px; margin: 0 auto 25px; font-size: 1.1rem; }
+        .btn { display: inline-block; background: var(--blue); color: #fff; text-decoration: none; padding: 12px 28px; border-radius: 5px; font-weight: bold; transition: transform 0.3s, background 0.3s; }
+        .btn:hover { background: #0d6efd; transform: translateY(-2px); }
+
+        .section-title { text-align: center; color: var(--blue); font-size: 1.8rem; margin: 50px 0 25px; }
+
+        .sports-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .box { background: #1c1c1e; border: 1px solid #333; border-radius: 8px; padding: 25px; text-align: center; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; animation: fadeIn 0.6s ease both; }
+        .box:nth-child(1) { animation-delay: 0.2s; }
+        .box:nth-child(2) { animation-delay: 0.35s; }
+        .box:nth-child(3) { animation-delay: 0.5s; }
+        .box:hover { transform: translateY(-5px); border-color: var(--blue); box-shadow: 0 8px 20px rgba(30,144,255,0.2); }
+        .box .icon { font-size: 2.5rem; display: block; margin-bottom: 10px; }
+        .box h3 { color: var(--blue); margin-bottom: 10px; }
+        .box p { color: #ccc; }
+
+        .highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .highlight { background: #1c1c1e; border: 1px solid #333; border-left: 4px solid var(--blue); border-radius: 8px; padding: 20px 25px; animation: fadeIn 0.7s ease both; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; }
+        .highlight:nth-child(1) { animation-delay: 0.1s; }
+        .highlight:nth-child(2) { animation-delay: 0.3s; }
+        .highlight:nth-child(3) { animation-delay: 0.5s; }
+        .highlight:nth-child(4) { grid-column: 1 / -1; animation-delay: 0.7s; }
+        .highlight:hover { transform: translateY(-5px); border-color: var(--blue); box-shadow: 0 8px 20px rgba(30,144,255,0.2); }
+        .highlight h3 { color: var(--blue); margin-bottom: 8px; }
+        .highlight p { color: #ccc; }
+
+        @media (max-width: 700px) {
+            .highlights { grid-template-columns: 1fr; }
+            .highlight:nth-child(4) { grid-column: auto; }
+        }
+
+        .cta { text-align: center; background: #1c1c1e; border: 1px solid #333; border-radius: 8px; padding: 35px 25px; margin: 50px 0 20px; animation: fadeIn 0.6s ease both; }
+        .cta h3 { color: var(--blue); font-size: 1.6rem; margin-bottom: 10px; }
+        .cta p { color: #ccc; margin-bottom: 20px; }
+
+        footer { background: var(--dark); text-align: center; padding: 15px; margin-top: 40px; color: #aaa; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Sports United</h1>
+    </header>
+
+    <nav>
+        <a href="Home-Page.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="Contact-Details.html">Contact</a>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h2>🏆 Play. Compete. Belong.</h2>
+            <p>Sports United is the official college club for football, cricket, and basketball. Whether you are a beginner or a pro, there is a place for you on our team.</p>
+            <a href="About.html" class="btn">Learn More About Us</a>
+        </section>
+
+        <h2 class="section-title">Our Sports</h2>
+        <section class="sports-grid">
+            <div class="box">
+                <span class="icon">⚽</span>
+                <h3>Football</h3>
+                <p>Fast-paced matches and skill drills every week. Join our squad and take your game to the next level.</p>
+            </div>
+            <div class="box">
+                <span class="icon">🏏</span>
+                <h3>Cricket</h3>
+                <p>Batting, bowling, and fielding sessions for all levels. Play friendly games and inter-college fixtures.</p>
+            </div>
+            <div class="box">
+                <span class="icon">🏀</span>
+                <h3>Basketball</h3>
+                <p>High-energy training on the court. Sharpen your dribbling, shooting, and team play with us.</p>
+            </div>
+        </section>
+
+        <h2 class="section-title">Why Join Us?</h2>
+        <section class="highlights">
+            <div class="highlight">
+                <h3>🤝 Team Spirit</h3>
+                <p>Play alongside teammates who push you to improve and celebrate every win together.</p>
+            </div>
+            <div class="highlight">
+                <h3>🎓 Open to All Students</h3>
+                <p>No tryouts, no experience required. Every student is welcome to play and train.</p>
+            </div>
+            <div class="highlight">
+                <h3>📅 Regular Practice</h3>
+                <p>Structured practice sessions every week, plus friendly matches and college tournaments.</p>
+            </div>
+            <div class="highlight">
+                <h3>⚖️ Balance Sport &amp; Studies</h3>
+                <p>Training is scheduled around classes so you can enjoy sport alongside your studies.</p>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h3>Ready to Get Involved?</h3>
+            <p>Have questions or want to join a team? Reach out to us — we would love to hear from you.</p>
+            <a href="Contact-Details.html" class="btn">Contact Us</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sports United. Built for Git &amp; GitHub Practical Assignment.</p>
+    </footer>
+
+</body>
+</html>
+

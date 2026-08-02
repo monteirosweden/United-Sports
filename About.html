@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sports United</title>
+    <style>
+        :root {
+            --blue: #1e90ff;
+            --dark: #111111;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background: #0a0a0a; color: #f4f4f4; line-height: 1.6; }
+
+        /* Animations */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+
+        header { background: var(--dark); text-align: center; padding: 20px; border-bottom: 3px solid var(--blue); animation: slideDown 0.6s ease; }
+        nav { background: var(--blue); text-align: center; padding: 12px; position: sticky; top: 0; z-index: 10; }
+        nav a { color: #fff; text-decoration: none; margin: 0 12px; font-weight: bold; display: inline-block; transition: transform 0.3s, opacity 0.3s; }
+        nav a:hover { opacity: 0.85; transform: scale(1.1); }
+
+        main { max-width: 700px; margin: 40px auto; padding: 0 20px; animation: fadeIn 0.8s ease; }
+        main h2 { color: var(--blue); margin-bottom: 10px; }
+        .box { background: #1c1c1e; border: 1px solid #333; border-radius: 8px; padding: 25px; margin-bottom: 20px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; animation: fadeIn 0.6s ease both; }
+        .box:nth-child(1) { animation-delay: 0.2s; }
+        .box:nth-child(2) { animation-delay: 0.35s; }
+        .box:nth-child(3) { animation-delay: 0.5s; }
+        .box:hover { transform: translateY(-5px); border-color: var(--blue); box-shadow: 0 8px 20px rgba(30,144,255,0.2); }
+        .box p { color: #ccc; }
+
+        footer { background: var(--dark); text-align: center; padding: 15px; margin-top: 40px; color: #aaa; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>About Sports United</h1>
+    </header>
+
+    <nav>
+        <a href="Home-Page.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="Contact-Details.html">Contact</a>
+    </nav>
+
+    <main>
+        <div class="box">
+            <h2>📜 Our History</h2>
+            <p>Founded in 2010, Sports United started as a small group of football, cricket, and basketball fans at the college. Today, it's the official club for all three sports.</p>
+        </div>
+        <div class="box">
+            <h2>🎯 Our Mission</h2>
+            <p>To give every student the chance to play football, cricket, and basketball through training, matches, and a supportive team culture.</p>
+        </div>
+        <div class="box">
+            <h2>💎 Our Values</h2>
+            <p>Inclusivity — open to all students. Team spirit — we win together. Balance — sport alongside studies.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sports United. Built for Git &amp; GitHub Practical Assignment.</p>
+    </footer>
+
+</body>
+</html>
+
