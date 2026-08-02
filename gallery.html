@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Sports United</title>
+    <style>
+        :root {
+            --blue: #1e90ff;
+            --dark: #111111;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background: #0a0a0a; color: #f4f4f4; line-height: 1.6; }
+
+        /* Animations */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+
+        header { background: var(--dark); text-align: center; padding: 20px; border-bottom: 3px solid var(--blue); animation: slideDown 0.6s ease; }
+        nav { background: var(--blue); text-align: center; padding: 12px; position: sticky; top: 0; z-index: 10; }
+        nav a { color: #fff; text-decoration: none; margin: 0 12px; font-weight: bold; display: inline-block; transition: transform 0.3s, opacity 0.3s; }
+        nav a:hover { opacity: 0.85; transform: scale(1.1); }
+
+        main { max-width: 1000px; margin: 40px auto; padding: 0 20px; animation: fadeIn 0.8s ease; }
+        main h2 { color: var(--blue); text-align: center; margin-bottom: 25px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .photo { height: 200px; border-radius: 8px; background-size: cover; background-position: center; border: 1px solid #333; overflow: hidden; transition: transform 0.4s, border-color 0.4s, box-shadow 0.4s; animation: fadeIn 0.6s ease both; }
+        .photo:nth-child(1) { animation-delay: 0.1s; }
+        .photo:nth-child(2) { animation-delay: 0.2s; }
+        .photo:nth-child(3) { animation-delay: 0.3s; }
+        .photo:nth-child(4) { animation-delay: 0.4s; }
+        .photo:nth-child(5) { animation-delay: 0.5s; }
+        .photo:nth-child(6) { animation-delay: 0.6s; }
+        .photo:hover { transform: scale(1.05); border-color: var(--blue); box-shadow: 0 8px 20px rgba(30,144,255,0.3); }
+
+        footer { background: var(--dark); text-align: center; padding: 15px; margin-top: 40px; color: #aaa; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sports United Gallery</h1>
+    </header>
+
+    <nav>
+        <a href="Home-Page.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="Contact-Details.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <main>
+        <h2>Moments at the Club</h2>
+        <div class="grid">
+            <div class="photo" style="background-image: url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="photo" style="background-image: url('https://images.unsplash.com/photo-1553778263-73a83bab9b0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="photo" style="background-image: url('https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="photo" style="background-image: url('https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="photo" style="background-image: url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="photo" style="background-image: url('https://images.unsplash.com/photo-1519861531473-9200262188bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sports United. Built for Git &amp; GitHub Practical Assignment.</p>
+    </footer>
+
+</body>
+</html>
+
