@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities - Sports United</title>
+    <style>
+        :root {
+            --blue: #1e90ff;
+            --dark: #111111;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background: #0a0a0a; color: #f4f4f4; line-height: 1.6; }
+
+        /* Animations */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+
+        header { background: var(--dark); text-align: center; padding: 20px; border-bottom: 3px solid var(--blue); animation: slideDown 0.6s ease; }
+        nav { background: var(--blue); text-align: center; padding: 12px; position: sticky; top: 0; z-index: 10; }
+        nav a { color: #fff; text-decoration: none; margin: 0 12px; font-weight: bold; display: inline-block; transition: transform 0.3s, opacity 0.3s; }
+        nav a:hover { opacity: 0.85; transform: scale(1.1); }
+
+        main { max-width: 900px; margin: 40px auto; padding: 0 20px; animation: fadeIn 0.8s ease; }
+        main h2 { color: var(--blue); text-align: center; margin-bottom: 25px; }
+        .grid { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+        .item { background: #1c1c1e; border: 1px solid #333; border-radius: 8px; padding: 20px; flex: 1; min-width: 250px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; animation: fadeIn 0.6s ease both; }
+        .item:nth-child(1) { animation-delay: 0.1s; }
+        .item:nth-child(2) { animation-delay: 0.2s; }
+        .item:nth-child(3) { animation-delay: 0.3s; }
+        .item:nth-child(4) { animation-delay: 0.4s; }
+        .item:nth-child(5) { animation-delay: 0.5s; }
+        .item:nth-child(6) { animation-delay: 0.6s; }
+        .item:hover { transform: translateY(-8px); border-color: var(--blue); box-shadow: 0 8px 20px rgba(30,144,255,0.25); }
+        .item h3 { color: var(--blue); margin-bottom: 8px; }
+        .item p { color: #ccc; }
+
+        footer { background: var(--dark); text-align: center; padding: 15px; margin-top: 40px; color: #aaa; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Our Facilities</h1>
+    </header>
+
+    <nav>
+        <a href="Home-Page.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="Contact-Details.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <main>
+        <h2>Football, Cricket &amp; Basketball Facilities</h2>
+        <div class="grid">
+            <div class="item">
+                <h3>🏏 Cricket Ground</h3>
+                <p>22-yard pitch with practice nets for batting and bowling.</p>
+            </div>
+            <div class="item">
+                <h3>⚽ Football Pitch</h3>
+                <p>Full-size grass pitch with floodlights for night training.</p>
+            </div>
+            <div class="item">
+                <h3>🏀 Basketball Court</h3>
+                <p>Indoor court with hoops, markings, and training equipment.</p>
+            </div>
+            <div class="item">
+                <h3>🥅 Equipment</h3>
+                <p>Bowling machines, cricket kits, footballs, cones, and bibs.</p>
+            </div>
+            <div class="item">
+                <h3>🏋️ Gym</h3>
+                <p>Weights and cardio for sports-specific fitness.</p>
+            </div>
+            <div class="item">
+                <h3>🩺 Physio Room</h3>
+                <p>First-aid and physiotherapy to keep players fit.</p>
+            </div>
+            <div class="item">
+                <h3>🏟️ Clubhouse</h3>
+                <p>Changing rooms and space for team talks and celebrations.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sports United. Built for Git &amp; GitHub Practical Assignment.</p>
+    </footer>
+
+</body>
+</html>
+
